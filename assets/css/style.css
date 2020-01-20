@@ -1,0 +1,132 @@
+html, body{
+	padding:0;
+	margin:0;
+}
+table{
+  max-height:100vw;
+}
+table tr td{
+	width:20px;
+	position: relative;
+	border:1px solid #DEDEDE;
+	border-right:0px;
+	border-bottom:0px;
+}
+table tr td:last-child{
+	border-right:1px solid #DEDEDE;
+}
+table tr:last-child td{
+	border-bottom:1px solid #DEDEDE;
+}
+table tr td:after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+.content {
+	position: absolute;
+	width: 100%;
+	text-align:center;
+	top:calc(50% - 9px);
+	font-size:11px;
+}
+.container{
+	position:relative;
+	width:100%;
+	min-height:100vh;
+}
+.rover{
+	position:absolute;
+	width:20px;
+	height:20px;
+	background-color:#ff8600;
+	font-size:11px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align:center;
+	color:white;
+}
+.rover:after, .rover:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.rover:after {
+	border-color: rgba(255, 134, 0, 0);
+	border-bottom-color: #ff8600;
+	border-width: 4px;
+	margin-left: -4px;
+}
+.log{
+	float:left;
+	width:30%;
+	min-width:300px;
+	overflow-y:scroll;
+	height:100vh;
+	max-height:100vh;
+	border:1px solid #DEDEDE;
+	font-size:14px;
+}
+.Plateau{
+	position:relative;
+	float:left;
+}
+.command_panel{
+	padding:20px;
+	float:right;
+	text-align:left;
+}
+.form-group{
+	padding:10px;
+}
+.form-group label{
+	width:100%;
+	float:left;
+	font-weight:600;
+	border-bottom:1px solid #DEDEDE;
+	margin:0 0 10px 0;
+}
+.form-group select, .form-group input{
+	padding:3px;
+}
+.btn{
+	display:inline-block;
+	position:relative;
+	padding:6px 12px;
+	text-align:center;
+	background-color:#ff8600;
+	cursor:pointer;
+	color:white;
+	border-radius:3px;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+.btn:after {
+    content: "";
+    background: #de7f00;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+	border-top-right-radius:10px;
+}
+
+.btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}

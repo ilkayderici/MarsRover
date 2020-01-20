@@ -1,0 +1,48 @@
+﻿<html>
+	<head>
+		<link type="text/css" href="assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="log"></div>
+			<div class="Plateau"></div>
+			<div class="command_panel">
+				<div class="form-group">
+					<label>Plateau Size</label>
+					<input type="text" name="coordinat" placeholder="Coordinat" value="5 5"/>
+				</div>				
+				<div class="form-group">
+					<div class="btn setSize">Set Size</div>
+				</div>
+				<hr>
+				<div class="form-group">
+					<label>New Rover Coordinat</label>
+					<input type="text" name="roverCoordinat" placeholder="Coordinat" value="0 0"/>
+					<select name="direction">
+						<option value="N">North</option>
+						<option value="E">East</option>
+						<option value="S">South</option>
+						<option value="W">West</option>
+					</select>
+				</div>	
+				<div class="form-group">
+					<div class="btn addRover">Add Rover</div>
+				</div>
+				<hr>
+				<div class="form-group list" style="display:none;">
+					<label>Rover List</label>
+					<select name="roverId"></select>
+				</div>
+				<div class="form-group">
+					<label>Command Line</label>
+					<input type="text" name="command" placeholder="LMMMRMMM"/>
+				</div>
+				<div class="form-group">
+					<div class="btn sendCommand">Send Command</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="assets/js/MarsRover.js"></script>
+	</body>
+</html>
